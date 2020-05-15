@@ -77,7 +77,7 @@ pub fn invoke_web() {
             .finalize().unwrap()
     };
 
-    rocket::custom(rocket_config, false)
+    rocket::custom(rocket_config)
         .mount("/", routes![all])
         .launch();
 

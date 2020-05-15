@@ -133,7 +133,7 @@ pub fn process(qq: &mut Vec<Query>, web: bool) {
 
     let mut new_qq = {
         if  config.lock().unwrap().dedup {
-            let mut dedup_hash = make_dedup_hash(&qq);
+            let dedup_hash = make_dedup_hash(&qq);
             let mut dedupd_qq: Vec<Query> = Vec::new();
 
             for (_, &q) in dedup_hash.iter() {

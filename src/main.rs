@@ -1,11 +1,9 @@
-#![feature(plugin)]
-#![plugin(rocket_codegen)]
-
+#![feature(proc_macro_hygiene, decl_macro)]
 #[macro_use] extern crate lazy_static;
 extern crate regex;
 extern crate chrono;
 extern crate clap;
-extern crate rocket;
+#[macro_use] extern crate rocket;
 
 mod regs;
 mod types;
